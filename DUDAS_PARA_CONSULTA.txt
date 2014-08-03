@@ -1,0 +1,7 @@
+++ 13-PLANIFICACION DE LA CAPACIDAD (PAG 11/17): ¿Si se planifica usando perfiles de recursos se asume que cada operación se va a realizar en un periodo distinto?¿Tiene sentido esto?
+
+++ 20-PLANIFICACION DE PROYECTOS (PAG 31, PL44): ¿Por que no se puede poner la duracion D como una variable a determinar por el PL?
+
+++ GENERAL: La planificacion en su conjunto se trata como un proceso iterativo y de idas y vueltas entre capacidad, recursos, MPS, etc.¿No existen métodos que integren todos los aspectos conjuntamente? (En forma de un gran PL, o semejante?
+
+++ GENERAL: ¿Que es una produccion PULSANTE?

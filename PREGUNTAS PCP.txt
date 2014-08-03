@@ -1,0 +1,130 @@
+[62] --- POR QUE JIT MEJORA LA PRODUCTIVIDAD?
+
+	Al eliminarse los stocks intermedios se evidencian problemas en el sistema productivo. De esta manera, al reducirse paulatinamente el stock se van solucionando los problemas, elevando la productividad en el proceso.
+
+	Cuando se llega a implementar JIT, el stock ideal es 0 (aunque esto no se logre generalmente), y los operarios cuidan del mantenimiento de sus maquinas (TPM), evitando asi la mayor parte de roturas, contribuyendo al crecimiento de la productividad.
+
+	Por otra parte, implementar JIT implica simplificar las tareas y estandarizarlas tanto como sea posible, lo cual eleva la productividad del sistema. El enfasis en la mejora continua tambien contribuye al aumento de la productividad.
+
+[63] --- PRINCIPIOS DE LA EEM
+
+	+ Foco en el CLIENTE, es quien determina la CALIDAD
+	+ La direccion debe estar comprometida con la mejora
+	+ La calidad es una cuestion estrategica, y esta a cargo del operario
+	+ Se deben eliminar todas aquellas tareas que no agreguen VALOR (para determinar cuales agregan valor se puede utilizar VSM)
+	+ Operarios involucrados y capacitados, y solucionan los problemas de calidad en conjunto con la direccion
+	+ Se utilizan herramientas estadisticas
+
+[64] --- ETAPAS PARA LA REDUCCION DE PAP
+
+	+ 1) Analisis de la situacion actual, cuantificando los tiempos de PAP
+	+ 2) Separar claramente la PAP interna de la externa
+	+ 3) Llevar las PAP internas a externas tanto como se pueda
+	+ 4) Mejora de los procedimientos de PAP:
+		Interna: Implementar dispositivos de enganche rapido
+				 Eliminar el ajuste mediante dispositivos
+				 Estandarizar
+
+		Externa: Cambiar layout
+				 Determinar una secuencia de montaje
+				 Asegurar la provision de los materiales necesarios
+
+[66] --- QUE ES EL RGE
+
+	+ Es un indicador del rendimiento del sistema productivo que abarca tres aspectos de la productividad:
+		1) Cobertura o disponibilidad: proporcion del tiempo en la que se tiene disponible el equipamiento.
+		2) Eficiencia productiva: que tanto mas rapido se trabaja que el tiempo estandar
+		3) Calidad: proporcion de piezas aceptadas
+	+ Como en el RGE están incluidas todas las pérdidas, toda mejora de este rendimiento a través de la mejora de procesos produce un aumento de la capacidad disponible sin necesidad de inversión en equipos nuevos.
+
+[69] --- KANBAN Y REGLAS KANBAN
+
+	El kanban es un sistema de informacion, movimiento de materiales, y coordinacion de la produccion que pertenece al sistema Toyota (lean, esbelta, eem, MoranProductionSystem, etc). Se basa en reglas sencillas y claras pero a respetar firmemente.
+
+	Utiliza tarjetas que valen por el retiro o por la orden de produccion de UNA unidad de material. Esta unidad puede ser una unidad de producto o un contenedor de una capacidad ESTANDAR prefijada.
+
+	Las reglas que han de seguirse son:
+		+ Una tarjeta vale solo por UN contenedor
+		+ Cambiar la CAPACIDAD del contenedor esta prohibido
+		+ Solo se podra PRODUCIR una unidad de material cuando se tenga una tarjeta que autorice
+		+ Solo se podra RETIRAR una unidad de material cuando se tenga una tarjeta que autorice
+		+ Se producira en el ORDEN en el que estan las tarjetas de produccion
+		+ En el tiempo en que no se produzca, el operario debe dedicarse al mantenimiento de su sector
+		+ La tarjeta esta fijada a la unidad
+		+ Las piezas DEFECTUOSAS nunca deben pasar a la proxima estacion
+		+ Se intentara minimizar la cantidad de tarjetas
+		+ Ajustando el numero de tarjetas se ajusta el stock, y ver problemas al redurcirlas
+
+[72] --- DIFERENCIA ENTRE CONTROL DE CALIDAD Y SISTEMA DE CALIDAD
+
+	El CONTROL de calidad se enfoca en los productos, en la medicion y deteccion de defectuosos. Se ubica LUEGO DE LA PRODUCCION, y filtra la salida de la misma.
+
+	El SISTEMA de calidad se INTEGRA al sistema productivo en su totalidad, mejorando los procesos y provocando que la calidad aumente. Incluye proveedores, distribucion, manejo de materiales, procesos productivos, etc. Se ubica EN TODA LA CADENA.
+
+[75] --- QUE ES POKA JOKE?
+
+	Cuando se intenta aplicar SMED y reducir los tiempos de puesta a punto, se busca adaptar las maquinas mediante dispositivos que hagan mas facil y rapido el intercambio de herramientas y el ajuste. Poka Joke implementa dispositivos que eliminan el error humano. Por ejemplo, en un enchufe se tiene una unica forma en la que se puede conectar, de esta manera no hay dudas ni errores sobre la orientacion del mismo.
+
+[78] --- CRP DEFINICIONES Y ALGORITMO
+
+	El ajuste de las ordenes de produccion a la capacidad disponible es un proceso iterativo que finaliza cuando se obtiene una solucion factible para la produccion.
+
+	Hay dos niveles de precision para el planeamiento de la capacidad:
+		+ Planificacion Aproximada de la Capacidad (RCCP)
+			- Perfiles de Recursos
+			- Listas de Capacidad
+			- Factores Globales
+		+ Planificacion de los Requerimientos de Capacidad (CRP)
+
+	El CRP se realiza como sigue:
+		1- La salida del MRP da las ordenes de produccion de los distintos elementos.
+		2- Se descuenta de las ordenes lo que se tiene en stock y las ordenes ya liberadas. El CRP tiene en cuenta solo lo que resta (que es lo que queda para terminar el trabajo)
+		3- Mediante los Lead-Times se determina cuando (cuanto antes de la fecha de terminacion requerida) se comenzara a producir en cada centro y cada operacion.
+		4- Con los diagramas de operaciones y tiempos estandar de cada uno de los subproductos se determina la carga que se tendra en cada centro de trabajo.
+		5- Se obtiene un perfil de carga de los distintos centros de trabajo al sumar lo obtenido a las cargas que se tenian previamente de planificaciones anteriores.
+		6- En esta etapa, se pueden tomar decisiones en cuanto al reordenamiento de las actividades y la nivelacion de las cargas, como puede ser la utilizacion de lotes de transferencia de tamaño distinto al de produccion, el retraso o adelanto de las ordenes, la utilizacion de maquinas en paralelo, etc.
+		   La otra opcion, con CARGA INFINITA, no tiene en cuenta la capacidad disponible pero es util para tomar las decisiones anteriores. 
+		   Si se tiene en cuenta la capacidad disponible se programa con CARGA FINITA, se utiliza para hacer la asignacion final de los trabajos, y se realiza generalmente por simulacion.
+		7- Tomadas las decisiones pertinentes, se calcula nuevamente MRP y CRP hasta obtener una solucion que satisfaga las necesidades.
+
+[85] --- PROGRAMACION CICLICA: METODOS HEURISTICOS
+
+	Al existir variaciones en la demanda y en la disponibilidad de recursos, surge la necesidad de utilizar metodos dinamicos, a costa de no conseguir el optimo en costos. Estos metodos dinamicos utilizan heuristicos.
+
+		+ Metodo Run-Out-Time (ROT): Metodo de lote fijo y tiempo entre lotes variable.
+			Si ya se fijaron los lotes Q.
+
+
+
+
+
+
+
+[89] --- INDICADORES DE DESEMPEÑO EN TOC
+
+	La teoria de restricciones considera que lo indicadores a utilizar deben ser globales, no locales, ya que la interseccion de los optimos locales no necesariamente implican el optimo global.
+	Los indicadores que utiliza esta teoria son:
+		+ Operativos: 
+			- 
+			- 
+			- 
+		+ Financieros: 
+			- Throughput: velocida/tasa a la que se genera dinero a traves de todos los ingresos. Igual a la cantidad que se vende por la contribucion marginal unitaria.
+			- Inventario: dinero invertido en inventario que se planea convertir en ingreso. Es el dinero almacenado en forma de stock en el sistema (materias primas, insumos, productos terminados, etc). Estos inventarios se valorizan solo por el costo que tienen, NO por su precio de venta.
+			- Gastos operativos: es el dinero que se gasta para convertir el Inventario en Throughput.
+
+[92] --- 
+
+
+
+[95] --- 
+
+
+
+
+
+PARA HACER ENTRE TODOS:
+81
+83
+84
+96
