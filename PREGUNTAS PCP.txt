@@ -104,22 +104,29 @@
 
 	La teoria de restricciones considera que lo indicadores a utilizar deben ser globales, no locales, ya que la interseccion de los optimos locales no necesariamente implican el optimo global.
 	Los indicadores que utiliza esta teoria son:
+		+ Financieros: El objetivo es aumentar T y disminuir I y GO:
+			- Throughput (T): velocida/tasa a la que se genera dinero a traves de todos los ingresos. Igual a la cantidad que se vende por la contribucion marginal unitaria.
+			- Inventario (I): dinero invertido en inventario que se planea convertir en ingreso. Es el dinero almacenado en forma de stock en el sistema (materias primas, insumos, productos terminados, etc). Estos inventarios se valorizan solo por el costo que tienen, NO por su precio de venta.
+			- Gastos operativos (GO): es el dinero que se gasta para convertir el Inventario en Throughput.
 		+ Operativos: 
-			- 
-			- 
-			- 
-		+ Financieros: 
-			- Throughput: velocida/tasa a la que se genera dinero a traves de todos los ingresos. Igual a la cantidad que se vende por la contribucion marginal unitaria.
-			- Inventario: dinero invertido en inventario que se planea convertir en ingreso. Es el dinero almacenado en forma de stock en el sistema (materias primas, insumos, productos terminados, etc). Estos inventarios se valorizan solo por el costo que tienen, NO por su precio de venta.
-			- Gastos operativos: es el dinero que se gasta para convertir el Inventario en Throughput.
+			- Utilidad neta (UN): T - GO
+			- Retorno sobre la inversion (ROI): UN / I
+			- Flujo de efectivo (CashFlow): 
 
-[92] --- 
+[92] --- CALCULO DE LOS AMORTIGUADORES EN TOC
 
+	En la Teoria de Restricciones se propone ubicar amortiguadores en lugares estrategicos en el sistema productivo. Los hay de 3 tiṕos:
+		+ Amortiguadores de Despacho: protegen el despacho de productos terminados.
+		+ Amortiguadores de Restriccion: aseguran la utilizacion al maximo de los recursos cuello de botella.
+		+ Amortiguadores de Armado: protegen la rama que sigue a un cuello de botella, para evitar que esperen por partes que provienen de recursos no-cuello de botella.
 
+	Los amortiguadores tienen longitud variable en funcion de las necesidades cambiantes. Se deben calcular constantemente, e intentar siempre que sean lo mas pequeños posibles. Hay dos factores que influyen en el tamaño de los amortiguadores:
+		+ Perturbacuines generadas por las variaciones de desempeño de los recursos.
+		+ Impacto de la variacion de la demanda en la programacion.
 
-[95] --- 
+[95] --- LINEAS DE MONTAJE: ALGORITMOS HEURISTICOS
 
-
+	
 
 
 
