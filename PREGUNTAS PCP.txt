@@ -1,4 +1,4 @@
-[62] --- POR QUE JIT MEJORA LA PRODUCTIVIDAD?
+[62] --- ¿POR QUE JIT MEJORA LA PRODUCTIVIDAD?
 
 	Al eliminarse los stocks intermedios se evidencian problemas en el sistema productivo. De esta manera, al reducirse paulatinamente el stock se van solucionando los problemas, elevando la productividad en el proceso.
 
@@ -29,7 +29,7 @@
 				 Determinar una secuencia de montaje
 				 Asegurar la provision de los materiales necesarios
 
-[66] --- QUE ES EL RGE
+[66] --- ¿QUE ES EL RGE?
 
 	+ Es un indicador del rendimiento del sistema productivo que abarca tres aspectos de la productividad:
 		1) Cobertura o disponibilidad: proporcion del tiempo en la que se tiene disponible el equipamiento.
@@ -61,7 +61,7 @@
 
 	El SISTEMA de calidad se INTEGRA al sistema productivo en su totalidad, mejorando los procesos y provocando que la calidad aumente. Incluye proveedores, distribucion, manejo de materiales, procesos productivos, etc. Se ubica EN TODA LA CADENA.
 
-[75] --- QUE ES POKA JOKE?
+[75] --- ¿QUE ES POKA JOKE?
 
 	Cuando se intenta aplicar SMED y reducir los tiempos de puesta a punto, se busca adaptar las maquinas mediante dispositivos que hagan mas facil y rapido el intercambio de herramientas y el ajuste. Poka Joke implementa dispositivos que eliminan el error humano. Por ejemplo, en un enchufe se tiene una unica forma en la que se puede conectar, de esta manera no hay dudas ni errores sobre la orientacion del mismo.
 
@@ -102,7 +102,7 @@
 
 [89] --- INDICADORES DE DESEMPEÑO EN TOC
 
-	La teoria de restricciones considera que lo indicadores a utilizar deben ser globales, no locales, ya que la interseccion de los optimos locales no necesariamente implican el optimo global.
+	La teoria de restricciones considera que los indicadores a utilizar deben ser globales, no locales, ya que la interseccion de los optimos locales no necesariamente implican el optimo global.
 	Los indicadores que utiliza esta teoria son:
 		+ Financieros: El objetivo es aumentar T y disminuir I y GO:
 			- Throughput (T): velocida/tasa a la que se genera dinero a traves de todos los ingresos. Igual a la cantidad que se vende por la contribucion marginal unitaria.
@@ -115,18 +115,55 @@
 
 [92] --- CALCULO DE LOS AMORTIGUADORES EN TOC
 
-	En la Teoria de Restricciones se propone ubicar amortiguadores en lugares estrategicos en el sistema productivo. Los hay de 3 tiṕos:
+	En la Teoria de Restricciones se propone ubicar amortiguadores en lugares estrategicos en el sistema productivo. Los hay de 3 tipos:
 		+ Amortiguadores de Despacho: protegen el despacho de productos terminados.
 		+ Amortiguadores de Restriccion: aseguran la utilizacion al maximo de los recursos cuello de botella.
 		+ Amortiguadores de Armado: protegen la rama que sigue a un cuello de botella, para evitar que esperen por partes que provienen de recursos no-cuello de botella.
 
 	Los amortiguadores tienen longitud variable en funcion de las necesidades cambiantes. Se deben calcular constantemente, e intentar siempre que sean lo mas pequeños posibles. Hay dos factores que influyen en el tamaño de los amortiguadores:
-		+ Perturbacuines generadas por las variaciones de desempeño de los recursos.
+		+ Perturbaciones generadas por las variaciones de desempeño de los recursos.
 		+ Impacto de la variacion de la demanda en la programacion.
 
 [95] --- LINEAS DE MONTAJE: ALGORITMOS HEURISTICOS
 
+	Los metodos heuristicos para el armado de lineas de montaje se basan en las relaciones de precedencia y en el tiempo de ciclo o cantidad de estaciones (uno define al otro). Luego ordenan las actividades con algun criterio heuristico. Un algoritmo es el siguiente:
+		1- Desarrollar la red de precedencias.
+		2- Ordenar la red por regiones de precedencias. Asignar las tareas a las regiones lo mas pronto posible.
+		3- Tabular las actividades por regiones e indicar posibles desplazamientos hacia adelante. 
+		4- Dentro de cada region ordenar las actividades por tiempo decreciente.
+		5- Determinar el numero minimo de estaciones (Tiempo de montaje / Tiempo de ciclo deseado). Asignar las tareas a las estaciones: primero las regiones primeras en precedencia, primero las actividades de mayor duracion.
+		6- Al asignar cada estacion, ver si se puede mejorar la eficiencia (acercar el tiempo de cada estacion al tiempo de ciclo sin pasarse) intercambiando alguna actividad por otra que este mas adelante pero cuyas precedentes ya hayan sido asignadas.
+
+[99] --- PROGRAMACION DE N TAREAS EN M PROCESADORES EN SERIE
+
+	Los objetivos de esta programacion son:
+		+ Reducir el lapso de trabajo de las n tareas
+		+ Reducir el flujo medio
+		+ Reducir la tardanza
+	Para 2 procesadores en serie:
+		1- Para todas las actividades, encontrar el minimo de Ti,1 y Ti,2 que son el tiempo de proceso en el primer y segundo procesador.
+		2- Si el tiempo es menor en P1, asignar la tarea en el primer lugar disponible al principio de la secuencia.
+		   Si el tiempo es menor en P2, asignar la tarea en el primer lugar disponible al final de la secuencia.
+		3- Quitar la tarea de la lista y seguir con paso 1. Si no quedan tareas, fin.
+	Para M procesadores en serie:
+		1- Dividir los procesadores en 2 grupos.
+		2- Aplicar el metodo para 2 procesadores.
+		3- Para cada grupo seguir subdividiendo y aplicando metodo para 2 procesadores.
+
+[101] --- ¿SE PUEDE PROGRAMAR UNA PROGRAMACION CICLICA CON LAS TECNICAS DE SECUENCIAMENTO? 
+
+	No, las tecnicas de secuenciamiento se utilizan para tareas de distintos articulos, mientras que la programacion ciclica programa distintos articulos cuyas tareas se realizan todas juntas.
+
+[104] --- CALCULO DE LOTE OPTIMO Q EN CELULAS
+
 	
+
+[107] --- TECNOLOGIA DE GRUPOS
+
+
+
+
+
 
 
 
