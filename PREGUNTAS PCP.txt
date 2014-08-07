@@ -228,7 +228,7 @@
 
 [122] --- ¿QUE SON LAS BARRERAS O MARCOS DEL MPS?
 
-	Cuando se planifica, se tiene en cuenta compromisos con los clientes, disponibilidades y pedidos a realizar de materiales a proveedores, capacidad disponible, etc. Esto hace que el nivel de flexibilidad sea muy bajo an el corto plazo luego de realizar dicha planificacion.
+	Cuando se planifica, se tiene en cuenta compromisos con los clientes, disponibilidades y pedidos a realizar de materiales a proveedores, capacidad disponible, etc. Esto hace que el nivel de flexibilidad en las revisiones sea muy bajo an el corto plazo luego de realizar dicha planificacion.
 
 	Se distinguen tres plazos de tiempo (llamados "Barreras" o "Marcos") en los que la flexibilidad para cambiar la decision del MPS se comporta diferente:
 		+ Periodos fijos: no se puede realizar ningun cambio, excepto caso de fuerza mayor.
@@ -237,7 +237,7 @@
 
 [124] --- PROGRAMA DE ARMADO FINAL (FAS)
 
-	
+	Cuando se tienen productos muy variados pero que su variedad consiste en la combinacion de partes o configuraciones estandar (y el ensamblaje de dichas partes es rapida), se puede realizar el MPS no con productos finales sino con los subconjuntos a ser ensamblados, y luego se realiza otro programa especifico de ensamblaje. Este programa es el FAS. Tiene como beneficio la reduccion de la variabilidad de la demanda a pronosticar y, por lo tanto, la capacidad de responder con menos faltante a las demandas especificas de cada modelo.
 
 [126] --- ¿QUE ES EL DRP?
 
