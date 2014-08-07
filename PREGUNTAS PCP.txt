@@ -100,6 +100,14 @@
 
 
 
+
+
+
+
+
+
+
+
 [89] --- INDICADORES DE DESEMPEÑO EN TOC
 
 	La teoria de restricciones considera que los indicadores a utilizar deben ser globales, no locales, ya que la interseccion de los optimos locales no necesariamente implican el optimo global.
@@ -156,9 +164,99 @@
 
 [104] --- CALCULO DE LOTE OPTIMO Q EN CELULAS
 
-	
+    CTA(Q) = C.D + S.D + i.(C+Cm).D.L + i.C.(Q + B)
+                     Q       2              (2    )
 
 [107] --- TECNOLOGIA DE GRUPOS
+
+	Es un sistema de racionalizacion de la produccion. La idea planteada es separar las piezas a producir en familias segun atributos de diseño o fabricacion (se elige uno u otro segun el objetivo. Puede haber piezas similares en diseño pero muy distintas en fabricacion).
+
+	Con estos grupos de piezas se facilita ya sea el diseño, al poder obtener nuevas piezas a partir de productos similares, o la fabricacion, al poder adoptar sistemas por celulas como reemplazo de sistemas por procesos.
+
+	Las familias de productos deben identificarse por algun metodo e inmediatamente se debe adoptar un metodo de clasificacion y codificacion.
+
+	En caso de que se desee adoptar un sistema de celulas, se puede definir una "pieza compuesta", la cual contiene todos los atributos de los miembros de la familia. Asi, para cada pieza particular del grupo se suprimiran operaciones. Obviamente la implementacion de un sistema por celulas implica grandes modificaciones de layout y posibles incompatibilidades de rendimientos de las maquinas puestas en una misma celula. 
+
+[110] --- DESPLIEGUE DE LA FUNCION DE CALIDAD (QFD)
+
+	QFD es un sistema que permite TRADUCIR lo que desea el CLIENTE a caracteristicas manejadas por la EMPRESA. Logra AUMENTAR la CALIDAD al brindar al cliente lo que el desea. Consiste en:
+		1- Identificar y jerarquizar a los clientes. Seleccionar el segmento de mercado adecuado.
+		
+		2- Identificar las expectativas del cliente (QUE). Se puede realizar mediante grupos de discusión, informes sobre quejas, encuestas realizadas, informes de responsables de puntos de venta, entrevistas con clientes, etc.
+		
+		3- Despliegue de las características de calidad. Determinar COMO se va a mejorar.
+		
+		4- Identificar las relaciones entre los requerimientos del cliente y los requerimientos técnicos, la correlacion entre lo que el cliente desea y los requerimientos tecnicos.
+		
+		5- Identificar la correlacion entre los requerimientos tecnicos. Puede ser que aparezcan incoherencias al querer alcanzar dos objetivos que son excluyentes.
+		
+		6- Evaluar la OPINION del cliente en comparacion con la competencia.
+		
+		7- Evaluar los REQUERIMIENTOS TECNICOS en términos de la competencia.
+		
+		8- Definir PRIORIDADES de los requerimientos tecnicos.
+
+[114] --- VALORES ATIPICOS - OUTLIERS
+
+	Son valores inusuales que no se espera que se repitan. Se los reconoce mediante la aplicacion de diferencias de 1er orden (para eliminar tendencia) y de orden L (para eliminar estacionalidad). En la serie de tiempo que resulta se establece el intervalo de confianza (t de student) y se seleccionan aquellos valores que escapen del intervalo.
+
+	En series de tiempo no se deben eliminar, sino que se los debe reemplazar por valores acordes. Estos "valores acordes" pueden tomarse como los pronosticos para el periodo en cuestion (si existe pronostico) o como el promedio entre valores adyacentes.
+
+	Se debe guardar registro de los outliers, ya que pueden indicar cambios de comportamiento de la demanda (o fenomeno de estudio).
+
+[116] --- ¿QUE INFORMACION SACO DE LOS GRAFICOS DE CANTIDADES ACUMULADAS?
+
+	De la grafica de demanda acumulada puedo conocer si el plan es factible, puedo saber en que periodos habra faltantes o en cuales habra que tener stock. Tambien puedo ver facilmente que puede suceder si tomo distintas politicas (nivelada, seguimiento, hibrida).
+
+[118] --- COMO HAGO LA PLANIFICACION AGREGADA POR PROCESOS Y SOBRE PEDIDOS
+
+	
+
+[120] --- ¿QUE ES EL MPS?
+
+	El MPS es el plan DESAGREGADO de produccion. Establece las cantidades a producir de cada producto en cada periodo. Si establece cuando se realizara cada producto especificamente dentro de cada periodo se llama PROGRAMA, mientras que si solo establece cantidades por periodo se llama PLAN.
+
+	Este plan puede obtenerse por dos vias: una es la desagregacion del plan agregado, y la otra es a partir de pronosticos apropiados.
+
+	Su horizonte debe ser tal que incluya todo el tiempo desde la provision de materiales, fabricacion de partes, y ensamblajes finales. Por lo tanto, se debe contar con pronosticos apropiados con dicho horizonte. 
+
+	Puede tomar dos formas muy distintas:
+		+ Si la produccion es intermitente en lotes, la planificacion es en "fase de tiempo", es decir cantidades por periodo.
+		+ Si la produccion es continua o repetitiva, la planificacion dada por el MPS es simplemente tasas de produccion de cada producto.
+
+	El MPS debe estar expresado en unidades de artículos finales para los cuales exista una lista de materiales que permita determinar los requerimientos de materiales y elementos componentes para su fabricación (funcion del MRP).
+
+[122] --- ¿QUE SON LAS BARRERAS O MARCOS DEL MPS?
+
+	Cuando se planifica, se tiene en cuenta compromisos con los clientes, disponibilidades y pedidos a realizar de materiales a proveedores, capacidad disponible, etc. Esto hace que el nivel de flexibilidad sea muy bajo an el corto plazo luego de realizar dicha planificacion.
+
+	Se distinguen tres plazos de tiempo (llamados "Barreras" o "Marcos") en los que la flexibilidad para cambiar la decision del MPS se comporta diferente:
+		+ Periodos fijos: no se puede realizar ningun cambio, excepto caso de fuerza mayor.
+		+ Periodos semifijos: se permiten cambios moderados, como tamaños de lotes, siempre que haya materiales disponibles.
+		+ Periodos flexibles: cambios libres, siempre que se satisfagan las restricciones de capacidad.
+
+[124] --- PROGRAMA DE ARMADO FINAL (FAS)
+
+	
+
+[126] --- ¿QUE ES EL DRP?
+
+	
+
+[128] --- ¿QUE ES LA PROGRAMACION CICLICA?
+
+	
+
+[130] --- LINEAS DE PRODUCCION
+
+	
+
+[132] --- ¿CUANDO SE PUEDE USAR AMORTIGUADORES PARA MEJORAR LA TASA DE PRODUCCION DE UNA LINEA?
+
+	
+
+[134] --- OBJETIVO DEL PAC
+
 
 
 
@@ -168,7 +266,7 @@
 
 
 PARA HACER ENTRE TODOS:
-81
-83
-84
-96
+[81]
+[83]
+[84]
+[96]
