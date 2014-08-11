@@ -208,10 +208,6 @@
 
 	De la grafica de demanda acumulada puedo conocer si el plan es factible, puedo saber en que periodos habra faltantes o en cuales habra que tener stock. Tambien puedo ver facilmente que puede suceder si tomo distintas politicas (nivelada, seguimiento, hibrida).
 
-[118] --- COMO HAGO LA PLANIFICACION AGREGADA POR PROCESOS Y SOBRE PEDIDOS
-
-	
-
 [120] --- ¿QUE ES EL MPS?
 
 	El MPS es el plan DESAGREGADO de produccion. Establece las cantidades a producir de cada producto en cada periodo. Si establece cuando se realizara cada producto especificamente dentro de cada periodo se llama PROGRAMA, mientras que si solo establece cantidades por periodo se llama PLAN.
@@ -241,32 +237,121 @@
 
 [126] --- ¿QUE ES EL DRP?
 
+	El sistema de Planificación de los Requerimientos de Distribución (DRP) es importante cuando se trabaja con centros de distribución (CD) para generar los requerimientos para el MPS. En este caso aporta información básica para planificar la producción, los reabastecimientos y los transportes. Es un sistema muy similar al MRP en su funcionamiento básico, pero referido exclusivamente a productos finales.
 	
+	HORIZONTES: En el DRP el horizonte de pronóstico requerido debe ser por lo menos igual al tiempo necesario para obtener el abastecimiento desde una cierta fuente, por ejemplo el almacén central. Si no hay CD o hay despachos directos de planta a los clientes se utiliza directamente el MPS para la planificación. En este caso el horizonte de planificación debe ser por lo menos igual al plazo de producción.
+
+	El sistema DRP hace posible la asignación centralizada a los CD de recursos escasos. De lo contrario, si cada CD hace pedidos independientemente podría haber faltantes en algunos y sobrantes en otros.
 
 [128] --- ¿QUE ES LA PROGRAMACION CICLICA?
 
-	
+	La programacion ciclica es un metodo de programacion de la produccion continua y repetitiva. Consta en determinar una secuencia en la que se fabricaran los distintos productos, luego se determina la cantidad a producir de cada uno dentro de la secuencia. Toma como hipotesis que los stocks varian linealmente, tanto la parte de la produccion como la de la demanda.
 
 [130] --- LINEAS DE PRODUCCION
 
-	
+	La linea de produccion es un conjunto de estaciones de trabajo en serie, las cuales tienen asignadas ciertas tareas y cierto tiempo estandar acumulado. Se busca que los tiempos de todas las estaciones sean lo mas parecidos posible.
+
+	El paso del producto entre estaciones puede ser manejado externamente (por una cadena, cinta, etc), este es el caso de las lineas SINCRONICAS. Otra opcion es que cada estacion pase el producto a la siguiente cuando termina de procesarlo (es el caso de las lineas ASINCRONICAS). Las lineas sincronicas pueden ser de paso constante o variable. El tiempo de ciclo se establece en funcion de la estacion mas lenta.
+
+	Las lineas pueden ser monoproducto, de multiples modelos (se producen varios modelos por lotes (100 A , 200 B, 300 C)), o de modelos intercalados (se intercala la produccion de varios modelos, sin lotes grandes (A , BB , CCC , A , BB , etc)).
 
 [132] --- ¿CUANDO SE PUEDE USAR AMORTIGUADORES PARA MEJORAR LA TASA DE PRODUCCION DE UNA LINEA?
 
-	
+	Las estaciones de una linea (o las maquinas que hay en ellas) tienen fallas cada cierto tiempo aleatorio. Ante cada falla, si las estaciones que siguen no tienen material para continuar se detiene la linea. Tambien se detienen las anteriores a la falla para no generar un stock intermedio innecesariamente grande. De esta manera, se pueden ubicar stocks intermedios de un tamaño MAXIMO PREDETERMINADO, que permitan a las demas estaciones continuar trabajando ante la falla de una estacion (AMORTIGUADORES). 
+
+	Entonces, dichos amortiguadores pueden utilizarse si la tasa de produccion es baja o media, ya que si la tasa de produccion es grande, los amortiguadores se llenan o terminan muy rapidamente (no cumpliendo asi su objetivo), o deben ser excesivamente grandes para poder cumplir con su cometido.
 
 [134] --- OBJETIVO DEL PAC
 
+	El objetivo del sistema de Control de las Actividades de Producción (PAC) es realizar el lanzamiento, la programación y el control del progreso de las ordenes de producción, es decir administrar el trabajo en curso de ejecución.
 
+	Las funciones básicas son:
+		+ Asignación y control de las prioridades en las órdenes de producción.
+		+ Mantenimiento de información sobre los trabajos en curso.
+		+ Control del estado de las órdenes.
+		+ Obtención de datos para control de la capacidad.
 
+[136] --- TIPOS DE KANBAN
 
+	+ Comun
+	+ De Transporte
+	+ De Produccion
+	+ Rectangular (para lotes grandes) - comenzar la produccion
+	+ Triangular (para lotes grandes) - buscar materiales y preparar para la produccion
+	+ De proveedores
+	+ De emergencia
+	+ Urgente
+	+ Orden de trabajo
+	+ Contenedores utilizados como Kanban
+	+ Etiqueta
+	+ Electrico
 
+[138] --- ¿POR QUE LOS LOTES GRANDES NO SON ACONSEJABLES EN SISTEMAS PULL? 
 
+	Primero, los lotes grandes no son aconsejables en ningun tipo de produccion ya que se ve aumentado el stock. Pero especialmente en los sistemas pull, los lotes grandes no son aconsejables ya que provocan que la capacidad de las lineas sea sobredimensionada.
 
+	>---A---\
+	         \
+	>---------|---|---|-----E---> D
+	             /   /
+	>---B-------/   /
+	               /
+	>---C---------/
 
+	En el ejemplo, la linea E de Ensamble satisface la demanda D, y es alimentada por lineas que producen partes especificas de A, B, y C respectivamente.
+
+	Si se produjera en lotes grandes, y en la linea principal se produjeran lotes de 100 piezas en una hora de A, luego B, luego C, las lineas de partes deberian tener capacidad para producir a la misma tasa que la linea E (100 u/h). En cambio, si se nivela la produccion y se produce (A B C A B C etc), las lineas A, B y C podrian respondeer a la demanda sin problemas teniendo solo una capacidad de 33,3 u/h, y manteniendo existencias minimas.
+
+[140] --- ¿QUE ES LA TECNOLOGIA DE GRUPOS?
+
+	Ya esta respondida.
+
+[142] --- CAPACIDAD DISPONIBLE Y REQUERIDA EN UNA CELDA
+
+	Capacidad disponible = RGE * Tiempo de carga
+	Capacidad requerida: a partir de lo programado por el MRP (CRP)
+
+[144] --- SISTEMAS CIM (Computer Integrated Manufacturing)
+
+	Conjunto de maquinas que operan por control numerico, y cuyo movimiento de materiales intermedio es automatico.
+
+[146] --- GESTION DE PROYECTOS
+
+	Son las actividades relacionadas con la organizacion, planificacion, direccion y control de las actividades y recursos necesarios para un proyecto. Consta de tres etapas:
+		+ Definicion del proyecto.
+		+ Planificacion, programacion y control del proyecto.
+		+ Ejecucion del proyecto.
+
+[148] --- ¿QUE ES LA RED DE PLANIFICACION?
+
+	Es una representacion grafica de las actividades de un proyecto indicando sus relaciones de precedencia. Toma la forma de un grafo dirigido sin circuitos ni bucles, con las actividades en los nodos
+
+[150] --- PRESUPUESTO Y PROGRAMACION DE PROYECTOS
+
+	Luego de realizada la programacion del proyecto, se puede confeccionar un presupuesto muy preciso, y se puede ademas modificar la asignacion de recursos para cambiar la duracion del proyecto y el costo total del mismo
+
+[156] --- DESPERDICIOS EN ABASTECIMIENTOS
+
+	+ Ordenes de Compra (OC).
+	+ Corrección de las OC.
+	+ Informes de recepción.
+	+ Facturas y pagos.
+	+ Manipuleo y traslado de materiales.
+	+ Inspecciones.
+	+ Almacenamiento.
+	+ Recuentos.
+	+ Cambios de recipientes.
+
+[158] --- ¿QUE ES UN CODIGO DE BARRAS?
+
+	Es un conjunto de lineas negras y espacios blancos de distintos grosores que codifican informacion. Tienen caracteres de inicio y fin de mensaje. Se leen con scanners.
 
 PARA HACER ENTRE TODOS:
 [81]
 [83]
 [84]
 [96]
+[104]
+[118] --- COMO HAGO LA PLANIFICACION AGREGADA POR PROCESOS Y SOBRE PEDIDOS
+[152]
+[54]
