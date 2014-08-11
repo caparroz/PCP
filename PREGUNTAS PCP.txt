@@ -276,8 +276,8 @@
 	+ Comun
 	+ De Transporte
 	+ De Produccion
-	+ Rectangular (para lotes grandes) - comenzar la produccion
-	+ Triangular (para lotes grandes) - buscar materiales y preparar para la produccion
+	+ Rectangular (para lotes grandes) - buscar materiales y preparar para la produccion
+	+ Triangular (para lotes grandes) - comenzar la produccion
 	+ De proveedores
 	+ De emergencia
 	+ Urgente
